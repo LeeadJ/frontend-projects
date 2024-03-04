@@ -110,3 +110,24 @@ li a{
 }
 
 /*///////////--container 3--/////////////////////*/
+
+.container3 {
+    padding: 95px 120px;
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    
+}
+
+.c3-quote {
+    color: #1F2937;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.c3-credit {
+    align-self: flex-end;
+    font-weight: 700;
+    font-size: 18px;
+}
