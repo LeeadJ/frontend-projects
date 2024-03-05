@@ -11,6 +11,7 @@
     flex-direction: column;
     background-color: #1F2937;
     color: white;
+    padding: 10px 100px 60px 100px;
 }
 
 .header-bar {
@@ -56,16 +57,19 @@ li a{
 }
 
 .c1-left button {
-    padding: 8px 20px;
-    border-radius:5px;
+    padding: 8px 40px;
+    border-radius: 8px;
+    border: none;
     background-color: #3882F6;
     color: #E5E7EB;
+    font-weight: 600;
 }
 
 .c1-right-img {
     flex-grow: 3;
     background-color: rgb(116, 114, 114);
     text-align: center;
+    height: 200px;
 }
 
 /*///////////--container 2--/////////////////////*/
