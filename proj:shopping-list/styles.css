@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0.5px solid red; */
+    font-size: 24px;
+}
+h1 {
+    text-align: center;
+    padding: 50px;
+    font-size: 48px;
+
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+ul {
+    text-align: center;
+    list-style-type: circle;
+}
+li {
+    margin-bottom: 10px;
+  }
+
+  li button {
+    font-size: 12px;
+    margin-left: 20px;
+    color: #666;
+  }
