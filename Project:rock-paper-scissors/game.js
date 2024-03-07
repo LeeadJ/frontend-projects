@@ -1,3 +1,4 @@
+/* Helper funcitons */
 function getComputerChoice() {
     let num = Math.random();
     return (num <= 0.33) ? 'Rock' :
@@ -15,17 +16,31 @@ function playRound(playerSelection, computerSelection) {
     } else {
         return [`Tie! Both players chose ${playerSelection}.`, 2];
     }
-}
+}//////////////////////////////////////////////
 
 
 
 function playGame() {
-    let win=0, loose=0, tie=0;
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt(`Please choose between "Rock", "Paper" and "Scissors"`);
-        const computerSelection = getComputerChoice();
-        let ans = playRound(playerSelection, computerSelection);
-        switch(ans[1]){
+    let win = 0,
+        loose = 0,
+        tie = 0,
+        round = 1;
+
+    const div = document.querySelector('#results');
+    div.textContent = `Game: ${round}, Current Results: Wins: ${win}, Losses: ${loose}, Ties: ${tie}`;
+    
+    const rock = document.querySelector('#btnRock');
+    const paper = document.querySelector('#btnPaper');
+    const scissors = document.querySelector('#btnScissors');
+
+    rock.addEventListener('click', () => playRoundAndUpdate('rock'));
+    paper.addEventListener('click', () => playRoundAndUpdate('paper'));
+    scissors.addEventListener('click', () => playRoundAndUpdate('scissors'));
+
+    function playRoundAndUpdate(playerChoice){
+        const compPick = getComputerChoice();
+        const result = playRound(playerChoice, compPick);
+        switch (result[1]) {
             case 0:
                 loose++;
                 break;
@@ -36,9 +51,25 @@ function playGame() {
                 tie++;
                 break;
         }
-        console.log(`Round #${i+1}: ${ans[0]}`);
+        round++;
+        if(round < 6){
+            div.textContent = `Game: ${round}, Current Results: Wins: ${win}, Losses: ${loose}, Ties: ${tie}`;
+        }
+        
+
+        if(round==6){
+            div.textContent = `Game: ${round-1}, Current Results: Wins: ${win}, Losses: ${loose}, Ties: ${tie}`;
+            const winner = document.querySelector('#winner');
+            if(win > loose){
+                winner.textContent = 'Congrats, You Won!!!'
+                winner.style.color = 'green';
+            }
+            else {
+                winner.textContent = 'You Loose! Better luck next time.'
+                winner.style.color = 'red';
+            }
+        }
     }
-    console.log(`Wins: ${win}, Losses: ${loose}, Ties: ${tie}`);
 }
 
-console.log(playGame());
+playGame();
