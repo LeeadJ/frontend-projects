@@ -32,11 +32,12 @@ function createGrid() {
         let userInput;
         do {
             userInput = prompt('Please enter the number (max 100) of squares per side.');
+            if(userInput === null){
+                break;
+            }
         } 
         // test to make sure input is valid or user clicks cancel
-        while ((userInput > 100 || !Number.isInteger(parseInt(userInput)) && userInput !== null)) {
-            userInput = prompt(`Invalid input: "${userInput}"! \n Please enter the number (max 100) of squares per side.`)
-        }
+        while (isNaN(userInput) || userInput < 1 || userInput > 100);
         if (userInput != null) {
             clearAndCreateUserGrid(userInput);
         }
