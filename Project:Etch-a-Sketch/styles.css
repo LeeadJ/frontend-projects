@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 0.5px solid red; */
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 94.1vh;
+    gap: 3px;
+}
+
+.grid-item {
+    flex: 0 0 calc(6.25% - 3px);
+    height: calc(6.25% - 3px);
+    background-color: lightblue;
+}
+
+.grid-item:hover {
+    background-color: blue;
+}
+.header-bar {
+    text-align: center;
+    padding: 5px;
+    height: 5vh;
+    background-color:blanchedalmond;
+}
+.btn {
+    padding: 5px 20px;
+    text-align: center;
+    background-color: lightblue;
+}
