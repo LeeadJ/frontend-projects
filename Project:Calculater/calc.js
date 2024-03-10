@@ -41,7 +41,10 @@ numberBtn.forEach(button => {
     button.addEventListener('click', () => {
         const buttonText = button.textContent;
         if (oper === '') {
-            num1 += buttonText;
+            if(num1.length < 11){
+                num1 += buttonText;
+            }
+            
         } else {
             num2 += buttonText;
         }
