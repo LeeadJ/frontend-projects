@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 0.5px solid red;
+    /* border: 0.5px solid red; */
 }
 
 body {
@@ -13,87 +13,63 @@ body {
 }
 .calculator {
     height: 500px;
-    width: 300px;
+    width: 400px;
     border: 1px solid black;
     background-color: rgb(154, 152, 152);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border-radius: 10px;
 }
 
 .screen {
-    width: 90%;
-    height: 20%; 
-    margin: 10px;
-    padding-right: 20px;
+    width: 92%;
+    padding-right: 4px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     background-color: rgb(63, 62, 62);
     color: white;
     font-size: 64px;
-    
+    overflow: hidden;
+    border: 3px solid black;
 }
 
-.center-btns {
-    width: 90%;
+.button-list{
+    width: 92%;
     height: 75%;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(141, 143, 145);
-    border: 1px solid rgb(84, 82, 82);
-
-
-}
-
-.numberList {
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
+}
+
+.button-list li {
+    height: calc(20%);
+    width: calc(25%);
+}
+
+.operatorBtn,
+.numberBtn {
     height: 100%;
-    width: 75%;
-    justify-content: center;
-}
-
-.numberList li {
-    width: calc(33.33% - 4px);
-    height: calc(25% - 4px);
-    margin: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(84, 82, 82);
-}
-
-.numberList li button {
     width: 100%;
-    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-.operatorList {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    width: 25%;
-}
-
-.operatorList li {
-    width: 100%;
-    height: calc(25% - 4px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(84, 82, 82);
-}
-
-.operatorList li button {
-    width: 100%;
-    height: 100%;
+.operatorBtn:hover,
+.numberBtn:hover {
+    opacity: 0.5;
 }
 
 
+.numberBtn {
+    background-color: rgb(72, 129, 103);
+}
+.operatorBtn {
+    background-color: rgb(230, 127, 43);
+}
 
+.button-list li.zeroBtn {
+    flex-grow: 2;
+}
