@@ -7,9 +7,12 @@
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    gap: 50px;
+    font-family: 'Roboto Mono', monospace;
 }
 .calculator {
     height: 500px;
