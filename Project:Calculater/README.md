@@ -33,4 +33,4 @@ The calculator uses the "Roboto Mono" font for a clean and modern look. The inte
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-Feel free to explore, use, and contribute to this calculator project. Happy calculating!
+Feel free to explore, use, and contribute to this calculator project. Happy calculating!!!
