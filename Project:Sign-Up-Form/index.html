@@ -4,13 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="./utils.js" defer></script>
 </head>
 <body>
-    <div class="left">
+    <div class="left"> 
         <div class="logo-background">
-            <img class="logo"/>
+            <img class="logo" src="./images/odin-logo.png"/>
+            <h1 class="odin">ODIN</h1>
         </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+
+        <form id="signUpForm">
+            <p>This is the form paragraph</p>
+
+            <fieldset class="user-info">
+                <div class="left-col">
+                    <div class="block">
+                        <h2 class="form-title">Lets Do This!</h2>
+                    </div>
+
+                    <div class="block">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" name="first-name" required>
+                    </div>
+
+                    <div class="block">
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="block">
+                        <label for="password" id="password">PASSWORD</label>
+                        <input 
+                            type="password" 
+                            name="password"
+                            minlength="8"
+                            maxlength="20"
+                            pattern=".{8,}" 
+                            title="Password must be at least 8 characters long"
+                            required
+                            >
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="block"></div>
+
+                    <div class="block">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" name="last-name" required>
+                    </div>
+
+                    <div class="block">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input 
+                            type="tel" 
+                            name="phone-number" 
+                            minlength="10" 
+                            maxlength="10"
+                            required
+                            >
+                    </div>
+
+                    <div class="block">
+                        <label for="password-confirm" id="confirmPassword">CONFIRM PASSWORD</label>
+                        <input 
+                            type="password" 
+                            name="password-confirm"
+                            minlength="8"
+                            maxlength="20"
+                            pattern=".{8,}" 
+                            title="Password must be at least 8 characters long"
+                            required>
+                    </div>
+                </div>
+
+            </fieldset>
+            <div class="nav-buttons">
+                <button class="createBtn" type="submit">Create Account</button>
+                <p>Already have an account? <a href="_">Log in</a></p>
+            </div>
+            
+        </form>
+    </div>
 </body>
 </html>
